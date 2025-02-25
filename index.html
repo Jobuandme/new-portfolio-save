@@ -18,28 +18,27 @@
     }
 
     .silhouetteContainer {
-      width: 1000px;
-      height: 1000px;
+      width: 100vh;
       display: flex;     
       position: relative; 
       left: 100px;
       animation-name: logos; 
-      animation-duration: 2.5s;  
+      animation-duration: 2s;  
     }
     #silhouetteContainer {animation-timing-function: ease-out;}
 
     
-    @keyframes logos {
-  0%   {left: -500px; top: 0px;}
+      @keyframes logos {
+    0%   {left: -500px;}
 
-  100% {left: 10; top: 0px;}
-}
-    
+    100% {left: 10PX;}
+  }
+
     
 .silhouette1, .silhouette2, .silhouette3, .silhouette4, .silhouette5 {
   width: 100%;
   position: absolute;
-  transition: left 0.75s;
+  transition: left 1s;
 }
 
 .silhouette1 {
@@ -91,7 +90,7 @@
 <body class="back">
   <div class="silhouetteContainer">
     <div class="silhouette1">    
-      <img src="Silhouette-01.png" alt="description of image" style="width: 100%">
+      <img src="silhouette-01-stretch-01.png" alt="description of image" style="width: 100%">
 </div>
     <div class="silhouette2">      
       <img src="Silhouette-02.png" alt="description of image" style="width: 100%">
@@ -117,8 +116,13 @@
       event.preventDefault();
     }
 
+    
     const element = document.scrollingElement || document.documentElement;
     element.addEventListener('wheel', transformScroll);
+
+    window.addEventListener('scroll', () => {
+  });
+    
   </script>
 </body>
 </html>
