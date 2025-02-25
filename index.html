@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+<head>
+  <meta charset="UTF-8">
+  <title>Michael Gvozdek's Portfolio</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .back {
+      background-color: #1e1f1e;
+      height: 60em;
+      width: 600%;
+      display: flex;
+    }
+
+    .silhouetteContainer {
+      width: 6000px;
+      display: flex;     
+      position: relative; 
+
+    }
+.silhouette1, .silhouette2, .silhouette3, .silhouette4, .silhouette5 {
+  width: 1000px;
+  height: 100%;
+  position: absolute;
+}
+
+.silhouette1 {
+  z-index: 5;
+  left: -250px;
+}
+    
+.silhouette2 {
+  z-index: 4;
+}
+
+.silhouette3 {
+  z-index: 3;
+  left: 250px;
+}
+
+.silhouette4 {
+  z-index: 2;
+  left: 500px;
+}
+
+.silhouette5 {
+  z-index: 1;
+  left: 750px;
+}
+  </style>
+</head>
+<body class="back">
+  <div class="silhouetteContainer">
+    <div class="silhouette1">    
+      <img src="Silhouette-01.png" alt="description of image" style="width: 100%">
+</div>
+    <div class="silhouette2">      
+      <img src="Silhouette-02.png" alt="description of image" style="width: 100%">
+</div>
+    <div class="silhouette3">      
+      <img src="Silhouette-03.png" alt="description of image" style="width: 100%">
+</div>
+    <div class="silhouette4">      
+      <img src="Silhouette-04.png" alt="description of image" style="width: 100%">
+</div>
+    <div class="silhouette5">      
+      <img src="Silhouette-05.png" alt="description of image" style="width: 100%">
+</div>
+
+  </div>
+
+  <script>
+    function transformScroll(event) {
+      if (!event.deltaY) {
+        return;
+      }
+      event.currentTarget.scrollLeft += event.deltaY + event.deltaX;
+      event.preventDefault();
+    }
+
+    const element = document.scrollingElement || document.documentElement;
+    element.addEventListener('wheel', transformScroll);
+  </script>
+</body>
+</html>
