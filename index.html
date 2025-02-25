@@ -11,22 +11,35 @@
     }
 
     .back {
-      background-color: #1e1f1e;
-      height: 60em;
+      background-color: #caccc9;
+      height: 100%;
       width: 600%;
       display: flex;
     }
 
     .silhouetteContainer {
       width: 1000px;
+      height: 1000px;
       display: flex;     
       position: relative; 
+      left: 100px;
+      animation-name: logos; 
+      animation-duration: 2.5s;  
     }
+    #silhouetteContainer {animation-timing-function: ease-out;}
+
+    
+    @keyframes logos {
+  0%   {left: -500px; top: 0px;}
+
+  100% {left: 10; top: 0px;}
+}
+    
     
 .silhouette1, .silhouette2, .silhouette3, .silhouette4, .silhouette5 {
-  width: 1000px;
+  width: 100%;
   position: absolute;
-  transition: left 1.5s;
+  transition: left 0.75s;
 }
 
 .silhouette1 {
@@ -71,7 +84,7 @@
 }
     
 .silhouette5:hover {
-  left: 0px;
+  left: -200px;
 }
   </style>
 </head>
