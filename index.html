@@ -18,39 +18,60 @@
     }
 
     .silhouetteContainer {
-      width: 6000px;
+      width: 1000px;
       display: flex;     
       position: relative; 
-
     }
+    
 .silhouette1, .silhouette2, .silhouette3, .silhouette4, .silhouette5 {
   width: 1000px;
-  height: 100%;
   position: absolute;
+  transition: left 1.5s;
 }
 
 .silhouette1 {
   z-index: 5;
-  left: -250px;
+  left: -500px;
 }
     
+.silhouette1:hover {
+  left: -600px;
+}    
+
 .silhouette2 {
   z-index: 4;
+  left: -400px;
 }
 
+.silhouette2:hover {
+  left: -500PX;
+}
+    
 .silhouette3 {
   z-index: 3;
-  left: 250px;
+  left: -300px;
 }
 
+.silhouette3:hover {
+  left: -400px;
+}
+    
 .silhouette4 {
   z-index: 2;
-  left: 500px;
+  left: -200px;
 }
-
+    
+.silhouette4:hover {
+  left: -300px;
+}
+    
 .silhouette5 {
   z-index: 1;
-  left: 750px;
+  left: -100px;
+}
+    
+.silhouette5:hover {
+  left: 0px;
 }
   </style>
 </head>
