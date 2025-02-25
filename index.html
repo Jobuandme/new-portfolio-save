@@ -2,14 +2,51 @@
 <html lang="en-ca">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Michael Gvozdek's Portfolio</title>
+  <link rel="stylesheet" href="https://use.typekit.net/ltl0scj.css">
   <style>
     html, body {
       height: 100%;
       margin: 0;
       overflow: hidden;
-    }
+      scroll-behavior: auto;
 
+    }  
+      .overlay-text {
+        position: relative;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: left;
+        padding: 10px;
+        animation-name: title; 
+        animation-duration: 2s; 
+        top: 300px;
+        right: -100px;
+      }
+    
+      .overlay-text:hover {
+        transition: left: 50px;
+      }
+    
+    
+      .name-Main {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 3em;
+        color: #1e1f1e;
+      }
+      
+      .name-Sub {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #516543;
+        transform: translate(0%, -125%);
+        font-size: 1.55em;
+      } 
+    
     .back {
       background-color: #caccc9;
       height: 100%;
@@ -26,15 +63,19 @@
       animation-duration: 2s;  
     }
     #silhouetteContainer {animation-timing-function: ease-out;}
-
-    
       @keyframes logos {
-    0%   {left: -500px;}
+    0%   {left: -500px; transform: rotate(-5deg);}
 
-    100% {left: 10PX;}
+    100% {left: 100PX; transform: rotate(0deg);} 
   }
-
     
+    #overlay-text {animation-timing-function: ease-out;}
+      @keyframes title {
+    0%   {top: -500px; transform: rotate(-5deg);}
+
+    100% {top: 300PX; right: -100px; transform: rotate(0deg);} 
+  }
+      
 .silhouette1, .silhouette2, .silhouette3, .silhouette4, .silhouette5 {
   width: 100%;
   position: absolute;
@@ -104,9 +145,15 @@
     <div class="silhouette5">      
       <img src="Silhouette-05.png" alt="description of image" style="width: 100%">
 </div>
-
   </div>
-
+  <div class="overlay-text">
+  <h1 class="name-Main">MICHAEL GVOZDEK</h1>
+      <h2 class="name-Sub">
+        Graphic Design - Digital Media
+        </h2></div>
+  
+  
+  
   <script>
     function transformScroll(event) {
       if (!event.deltaY) {
