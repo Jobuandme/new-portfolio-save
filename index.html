@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en-ca">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Michael Gvozdek's Portfolio</title>
-  <link rel="stylesheet" href="https://use.typekit.net/ltl0scj.css">
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      overflow: hidden;
-      scroll-behavior: auto;
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Gvozdek's Portfolio</title>
+    <link rel="stylesheet" href="https://use.typekit.net/ltl0scj.css">
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        scroll-behavior: auto;
 
-    }  
+      }
+
       .overlay-text {
         position: relative;
         font-size: 20px;
         font-weight: bold;
         text-align: left;
         padding: 10px;
-        animation-name: title; 
-        animation-duration: 2s; 
+        animation-name: title;
+        animation-duration: 2s;
         top: 300px;
         right: -100px;
+        transition: transform 1s;
+        height: 150px;
       }
-    
+
       .overlay-text:hover {
-        transition: left: 50px;
+        transform: rotate(2deg);
       }
-    
-    
+
+
       .name-Main {
         font-family: "azo-sans-web", sans-serif;
         font-weight: 900;
@@ -37,7 +41,7 @@
         font-size: 3em;
         color: #1e1f1e;
       }
-      
+
       .name-Sub {
         font-family: "azo-sans-web", sans-serif;
         font-weight: 400;
@@ -45,131 +49,164 @@
         color: #516543;
         transform: translate(0%, -125%);
         font-size: 1.55em;
-      } 
-    
-    .back {
-      background-color: #caccc9;
-      height: 100%;
-      width: 600%;
-      display: flex;
-    }
+      }
 
-    .silhouetteContainer {
-      width: 100vh;
-      display: flex;     
-      position: relative; 
-      left: 100px;
-      animation-name: logos; 
-      animation-duration: 2s;  
-    }
-    #silhouetteContainer {animation-timing-function: ease-out;}
+      .back {
+        background-color: #caccc9;
+        height: 100%;
+        width: 600%;
+        display: flex;
+      }
+
+      .silhouetteContainer {
+        width: 100vh;
+        display: flex;
+        position: relative;
+        left: 100px;
+        animation-name: logos;
+        animation-duration: 2s;
+      }
+
+      #silhouetteContainer {
+        animation-timing-function: ease-out;
+      }
+
       @keyframes logos {
-    0%   {left: -500px; transform: rotate(-5deg);}
+        0% {
+          left: -500px;
+          transform: rotate(-5deg);
+        }
 
-    100% {left: 100PX; transform: rotate(0deg);} 
-  }
-    
-    #overlay-text {animation-timing-function: ease-out;}
+        100% {
+          left: 100PX;
+          transform: rotate(0deg);
+        }
+      }
+
+      #overlay-text {
+        animation-timing-function: ease-in-out;
+      }
+
       @keyframes title {
-    0%   {top: -500px; transform: rotate(-5deg);}
+        0% {
+          top: -500px;
+          transform: rotate(-5deg);
+        }
 
-    100% {top: 300PX; right: -100px; transform: rotate(0deg);} 
-  }
-      
-.silhouette1, .silhouette2, .silhouette3, .silhouette4, .silhouette5 {
-  width: 100%;
-  position: absolute;
-  transition: left 1s;
-}
+        100% {
+          top: 300PX;
+          right: -100px;
+          transform: rotate(0deg);
+        }
+      }
 
-.silhouette1 {
-  z-index: 5;
-  left: -500px;
-}
-    
-.silhouette1:hover {
-  left: -600px;
-}    
+      .silhouette1,
+      .silhouette2,
+      .silhouette3,
+      .silhouette4,
+      .silhouette5 {
+        width: 100%;
+        position: absolute;
+        transition: left 1s;
+      }
 
-.silhouette2 {
-  z-index: 4;
-  left: -400px;
-}
+      .silhouette1 {
+        z-index: 5;
+        left: -500px;
+      }
 
-.silhouette2:hover {
-  left: -500PX;
-}
-    
-.silhouette3 {
-  z-index: 3;
-  left: -300px;
-}
+      .silhouette1:hover {
+        left: -600px;
+      }
 
-.silhouette3:hover {
-  left: -400px;
-}
-    
-.silhouette4 {
-  z-index: 2;
-  left: -200px;
-}
-    
-.silhouette4:hover {
-  left: -300px;
-}
-    
-.silhouette5 {
-  z-index: 1;
-  left: -100px;
-}
-    
-.silhouette5:hover {
-  left: -200px;
-}
-  </style>
-</head>
-<body class="back">
-  <div class="silhouetteContainer">
-    <div class="silhouette1">    
-      <img src="silhouette-01-stretch-01.png" alt="description of image" style="width: 100%">
-</div>
-    <div class="silhouette2">      
-      <img src="Silhouette-02.png" alt="description of image" style="width: 100%">
-</div>
-    <div class="silhouette3">      
-      <img src="Silhouette-03.png" alt="description of image" style="width: 100%">
-</div>
-    <div class="silhouette4">      
-      <img src="Silhouette-04.png" alt="description of image" style="width: 100%">
-</div>
-    <div class="silhouette5">      
-      <img src="Silhouette-05.png" alt="description of image" style="width: 100%">
-</div>
-  </div>
-  <div class="overlay-text">
-  <h1 class="name-Main">MICHAEL GVOZDEK</h1>
+      .silhouette2 {
+        z-index: 4;
+        left: -400px;
+      }
+
+      .silhouette2:hover {
+        left: -500PX;
+      }
+
+      .silhouette3 {
+        z-index: 3;
+        left: -300px;
+      }
+
+      .silhouette3:hover {
+        left: -400px;
+      }
+
+      .silhouette4 {
+        z-index: 2;
+        left: -200px;
+      }
+
+      .silhouette4:hover {
+        left: -300px;
+      }
+
+      .silhouette5 {
+        z-index: 1;
+        left: -100px;
+      }
+
+      .silhouette5:hover {
+        left: -200px;
+      }
+
+      .secondBack {
+        background: #1e1f1e;
+        height: 200%;
+        width: 1000px;
+        position: absolute;
+        left: 1600px;
+      }
+    </style>
+  </head>
+  <body class="back">
+    <div class="silhouetteContainer">
+      <div class="silhouette1">
+        <img src="silhouette-01-stretch-01.png" alt="description of image" style="width: 100%">
+      </div>
+      <div class="silhouette2">
+        <img src="Silhouette-02.png" alt="description of image" style="width: 100%">
+      </div>
+      <div class="silhouette3">
+        <img src="Silhouette-03.png" alt="description of image" style="width: 100%">
+      </div>
+      <div class="silhouette4">
+        <img src="Silhouette-04.png" alt="description of image" style="width: 100%">
+      </div>
+      <div class="silhouette5">
+        <img src="Silhouette-05.png" alt="description of image" style="width: 100%">
+      </div>
+    </div>
+    <div class="overlay-text">
+      <h1 class="name-Main">MICHAEL GVOZDEK</h1>
       <h2 class="name-Sub">
         Graphic Design - Digital Media
-        </h2></div>
-  
-  
-  
-  <script>
-    function transformScroll(event) {
-      if (!event.deltaY) {
-        return;
+      </h2>
+    </div>
+    <div class="secondBack" style="transform: rotate(35deg);"></div>
+    <div class="secondBack" style="left: 2300px; width: 3000px;"></div>
+
+
+
+    <script>
+      function transformScroll(event) {
+        if (!event.deltaY) {
+          return;
+        }
+        event.currentTarget.scrollLeft += event.deltaY + event.deltaX;
+        event.preventDefault();
       }
-      event.currentTarget.scrollLeft += event.deltaY + event.deltaX;
-      event.preventDefault();
-    }
 
-    
-    const element = document.scrollingElement || document.documentElement;
-    element.addEventListener('wheel', transformScroll);
 
-    window.addEventListener('scroll', () => {
-  });
-    
-  </script>
-</body>
+      const element = document.scrollingElement || document.documentElement;
+      element.addEventListener('wheel', transformScroll);
+
+      window.addEventListener('scroll', () => {});
+    </script>
+  </body>
 </html>
