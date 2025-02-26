@@ -23,7 +23,7 @@
         padding: 10px;
         animation-name: title;
         animation-duration: 2s;
-        top: 300px;
+        top: 27vh;
         right: -100px;
         transition: transform 1s;
         height: 150px;
@@ -38,7 +38,7 @@
         font-family: "azo-sans-web", sans-serif;
         font-weight: 900;
         font-style: normal;
-        font-size: 3em;
+        font-size: clamp(3em, 5vw, 3em);  
         color: #1e1f1e;
       }
 
@@ -62,7 +62,7 @@
         width: 100vh;
         display: flex;
         position: relative;
-        left: 100px;
+        left: 4.9vw;
         animation-name: logos;
         animation-duration: 2s;
       }
@@ -158,10 +158,11 @@
       .secondBack {
         background: #1e1f1e;
         height: 200%;
-        width: 1000px;
+        width: 100vh;
         position: absolute;
         left: 1600px;
-      }
+      } 
+      
     </style>
   </head>
   <body class="back">
@@ -180,8 +181,8 @@
       </div>
       <div class="silhouette5">
         <img src="Silhouette-05.png" alt="description of image" style="width: 100%">
-      </div>
-    </div>
+      </div> 
+    </div> 
     <div class="overlay-text">
       <h1 class="name-Main">MICHAEL GVOZDEK</h1>
       <h2 class="name-Sub">
