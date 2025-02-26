@@ -6,8 +6,8 @@
     <title>Michael Gvozdek's Portfolio</title>
     <link rel="stylesheet" href="https://use.typekit.net/ltl0scj.css">
     <style>
-      html,  
-      body { 
+      html,
+      body {
         height: 100%;
         margin: 0;
         overflow: hidden;
@@ -91,7 +91,7 @@
         animation-timing-function: ease-in-out;
       }
 
-      @keyframes title { 
+      @keyframes title {
         0% {
           top: -500px;
           transform: rotate(-5deg);
@@ -187,6 +187,7 @@
       }
 
       .sectionThree {
+        width: 150vw;
         background-color: #283121;
         /* dark green */
         /*clip-path: polygon(8% 0, 100% 0, 92% 100%, 0% 100%);*/
@@ -234,43 +235,55 @@
         padding-left: 100px;
 
       }
-      
+
       .logo {
-        width: 70px; 
+        width: 70px;
         height: 70px;
         transition: transform 0.5s;
       }
 
       .logo:hover {
-       transform: scaleX(150%) scaleY(150%);
+        transform: scaleX(150%) scaleY(150%);
 
       }
+
       b {
         color: #516543;
       }
-      
-    .arrow-container {
-      position: absolute;
-      top: 90vh;
-      right: 200px;
-      width: 100px;
-      height: auto;
-      animation: bounce 2s ease-out;
-    }
 
-    @keyframes bounce {
-      0% {
-        transform: rotate(-5deg) translate(0px, 100px);
+      .arrow-container {
+        position: absolute;
+        top: 90vh;
+        right: 200px;
+        width: 100px;
+        height: auto;
+        animation: bounce 2s ease-out;
       }
-      100% {
-        transform: rotate(0deg);
-      }
-    }
 
-    .arrow {
-      width: 100%;
-      height: auto;
-    }
+      @keyframes bounce {
+        0% {
+          transform: rotate(-5deg) translate(0px, 100px);
+        }
+
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+
+      .arrow {
+        width: 100%;
+        height: auto;
+      }
+
+      .contentSecond {
+        display: flex;
+        flex-direction: row;
+        align-items: left;
+        justify-content: space between;
+        height: calc(100vh - 200px);
+        margin: 100px 100px 100px 100px;
+        background: red;
+      }
     </style>
   </head>
   <body class="back">
@@ -299,8 +312,8 @@
         </h2>
       </div>
       <div class="arrow-container" id="arrow">
-  <img src="arrow.png" alt="Arrow pointing down" class="arrow">
-</div>
+        <img src="arrow.png" alt="Arrow pointing down" class="arrow">
+      </div>
     </div>
     <div class="section sectionTwo">
       <div class="content">
@@ -316,11 +329,12 @@
             My passion for BMX has built the foundation of my creative style, with the vibrant, bold, and <br>gritty nature of skateparks bleeding into my designs. The graffiti I see around me every day has <br>inspired me to pick up <b>illustration</b> as a hobby, which is reflected in many of my projects. <br>Time leading my high school yearbook team as well as directing my first documentary <br>has given me excellent <b>project management</b> and <b>collaboration </b>skills.
           </p>
         </div>
-        <img class="logo" src="MichaelGvozdek - SilhouetteLogo.png" alt="Michaels Logo" >
+        <img class="logo" src="MichaelGvozdek - SilhouetteLogo.png" alt="Michaels Logo">
       </div>
     </div>
 
     <div class="section sectionThree">
+      <div class="contentSecond"></div>
     </div>
 
     <div class="section sectionFour">
@@ -361,7 +375,6 @@
       });
 
       smoothScroll(); // Start the animation loop
-      
     </script>
   </body>
 </html>
