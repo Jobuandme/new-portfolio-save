@@ -38,7 +38,7 @@
         font-family: "azo-sans-web", sans-serif;
         font-weight: 900;
         font-style: normal;
-        font-size: clamp(3em, 5vw, 3em);  
+        font-size: clamp(3em, 5vw, 3em);
         color: #1e1f1e;
       }
 
@@ -57,6 +57,9 @@
         width: 400vw;
         display: flex;
         flex-direction: row;
+        justify-content: flex-start;
+        /* Ensures items align properly */
+
       }
 
       .silhouetteContainer {
@@ -82,7 +85,7 @@
           left: 100PX;
           transform: rotate(0deg);
         }
-       }
+      }
 
       #overlay-text {
         animation-timing-function: ease-in-out;
@@ -154,76 +157,140 @@
 
       .silhouette5:hover {
         left: -200px;
-      } 
+      }
 
       .secondBack {
         height: 100vh;
         position: absolute;
         left: 70vw;
-      } 
-      
-    .section {
-      width: 100vw;
-      height: 100vh;
-      flex-shrink: 0; /* Prevents sections from shrinking */
-    }
+      }
 
-    .sectionOne {
-      background-color: #caccc9; /* Light gray */
-    }
+      .section {
+        width: 100vw;
+        height: 100vh;
+        flex-shrink: 0;
+        /* Prevents sections from shrinking */
+      }
 
-    .sectionTwo {
-      background-color: #1e1f1e; /* dark grey */
-      /*clip-path: polygon(8% 0, 100% 0, 92% 100%, 0% 100%);*/    }
+      .sectionOne {
+        background-color: #caccc9;
+        /* Light gray */
 
-    .sectionThree {
-      background-color: #283121; /* dark green */
-      /*clip-path: polygon(8% 0, 100% 0, 92% 100%, 0% 100%);*/
-    }
+      }
 
-    .sectionFour {
-      background-color: #516543; /* Green */
-    }
-      
+      .sectionTwo {
+        width: 60vw;
+        min-width: 50vw;
+        background-color: #1e1f1e;
+        /* dark grey */
+        /*clip-path: polygon(8% 0, 100% 0, 92% 100%, 0% 100%);*/
+      }
+
+      .sectionThree {
+        background-color: #283121;
+        /* dark green */
+        /*clip-path: polygon(8% 0, 100% 0, 92% 100%, 0% 100%);*/
+      }
+
+      .sectionFour {
+        background-color: #516543;
+        /* Green */
+      }
+
+      .paraElement {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.25em;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        width: 100%;
+        color: #a9a9a9;
+        margin-top: 100px;
+        line-height: 30px;
+        padding-bottom: 50px;
+      }
+
+      .titleElement {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 3em;
+        width: 60%;
+        color: #e8ebe7;
+        margin-top: 200px;
+        line-height: 30px;
+        text-align: left;
+
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: flex-start;
+        height: 100%;
+        padding-left: 100px;
+
+      }
+
+      b {
+        color: #516543;
+      }
     </style>
   </head>
   <body class="back">
     <div class="section sectionOne">
-    <div class="silhouetteContainer">
-      <div class="silhouette1">
-        <img src="silhouette-01-stretch-01.png" alt="description of image" style="width: 100%">
+      <div class="silhouetteContainer">
+        <div class="silhouette1">
+          <img src="silhouette-01-stretch-01.png" alt="description of image" style="width: 100%">
+        </div>
+        <div class="silhouette2">
+          <img src="Silhouette-02.png" alt="description of image" style="width: 100%">
+        </div>
+        <div class="silhouette3">
+          <img src="Silhouette-03.png" alt="description of image" style="width: 100%">
+        </div>
+        <div class="silhouette4">
+          <img src="Silhouette-04.png" alt="description of image" style="width: 100%">
+        </div>
+        <div class="silhouette5">
+          <img src="Silhouette-05.png" alt="description of image" style="width: 100%">
+        </div>
       </div>
-      <div class="silhouette2">
-        <img src="Silhouette-02.png" alt="description of image" style="width: 100%">
+      <div class="overlay-text">
+        <h1 class="name-Main">MICHAEL GVOZDEK</h1>
+        <h2 class="name-Sub">
+          Graphic Design - Digital Media
+        </h2>
       </div>
-      <div class="silhouette3">
-        <img src="Silhouette-03.png" alt="description of image" style="width: 100%">
-      </div>
-      <div class="silhouette4">
-        <img src="Silhouette-04.png" alt="description of image" style="width: 100%">
-      </div>
-      <div class="silhouette5">
-        <img src="Silhouette-05.png" alt="description of image" style="width: 100%">
-      </div> 
-    </div> 
-    <div class="overlay-text">
-      <h1 class="name-Main">MICHAEL GVOZDEK</h1>
-      <h2 class="name-Sub">
-        Graphic Design - Digital Media
-      </h2>
     </div>
-  </div>
     <div class="section sectionTwo">
-    
+      <div class="content">
+        <div class="titleElement">
+          About Me
+        </div>
+
+        <div class="paraElement">
+          <p><b style="font-size: 1.5em;">I’m Michael Gvozdek</b><br><br>
+
+            I turn the world around me into vibrant, creative projects. Currently, I'm studying Global Business<br> and Digital Art at the University of Waterloo’s Stratford School of Interaction Design and Business.<br> Digital design has been my focus since highschool and I’ve picked up experience with <b>Photoshop</b>,<br> <b>Illustrator</b>, <b>InDesign</b>, <b>After Effects</b>, and <b>Premiere Pro</b>. In combination with my design skills, I have<br> experience with coding creative projects in Python, Java, Javascript, and HTML/CSS.
+            <br><br>
+            My passion for BMX has built the foundation of my creative style, with the vibrant, bold, and <br>gritty nature of skateparks bleeding into my designs. The graffiti I see around me every day has <br>inspired me to pick up <b>illustration</b> as a hobby, which is reflected in many of my projects. <br>Time leading my high school yearbook team as well as directing my first documentary <br>has given me excellent <b>project management</b> and <b>collaboration </b>skills.
+          </p>
+        </div>
+        <img src="MichaelGvozdek - SilhouetteLogo.png" alt="description of image" style="width: 70px; height: 70px;">
+      </div>
     </div>
-    
+
     <div class="section sectionThree">
     </div>
 
     <div class="section sectionFour">
     </div>
-    
-    
+
+
     <script>
       function transformScroll(event) {
         if (!event.deltaY) {
@@ -233,12 +300,13 @@
         event.preventDefault();
       }
 
+
       const element = document.scrollingElement || document.documentElement;
       element.addEventListener('wheel', transformScroll);
 
       window.addEventListener('scroll', () => {});
-      
-      const scrollContainer = document.documentElement; 
+
+      const scrollContainer = document.documentElement;
       let scrollAmount = 0;
       let targetScroll = 0;
       let easeFactor = 0.05; // Adjust for more/less smoothness
@@ -252,11 +320,11 @@
       document.addEventListener("wheel", (event) => {
         event.preventDefault();
         targetScroll += event.deltaY; // Use `deltaX` if scrolling sideways by default
-      }, { passive: false });
+      }, {
+        passive: false
+      });
 
       smoothScroll(); // Start the animation loop
-      
-      
     </script>
   </body>
 </html>
