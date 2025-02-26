@@ -233,11 +233,30 @@
         event.preventDefault();
       }
 
-
       const element = document.scrollingElement || document.documentElement;
       element.addEventListener('wheel', transformScroll);
 
       window.addEventListener('scroll', () => {});
+      
+      const scrollContainer = document.documentElement; 
+      let scrollAmount = 0;
+      let targetScroll = 0;
+      let easeFactor = 0.05; // Adjust for more/less smoothness
+
+      function smoothScroll() {
+        scrollAmount += (targetScroll - scrollAmount) * easeFactor;
+        scrollContainer.scrollLeft = scrollAmount;
+        requestAnimationFrame(smoothScroll);
+      }
+
+      document.addEventListener("wheel", (event) => {
+        event.preventDefault();
+        targetScroll += event.deltaY; // Use `deltaX` if scrolling sideways by default
+      }, { passive: false });
+
+      smoothScroll(); // Start the animation loop
+      
+      
     </script>
   </body>
 </html>
