@@ -6,7 +6,7 @@
     <title>Michael Gvozdek's Portfolio</title>
     <link rel="stylesheet" href="https://use.typekit.net/ltl0scj.css">
     <style>
-      html,
+      html,  
       body {
         height: 100%;
         margin: 0;
@@ -30,7 +30,7 @@
       }
 
       .overlay-text:hover {
-        transform: rotate(2deg);
+        transform: rotate(2deg) scaleX(125%) scaleY(125%);
       }
 
 
@@ -234,7 +234,17 @@
         padding-left: 100px;
 
       }
+      
+      .logo {
+        width: 70px; 
+        height: 70px;
+        transition: transform 0.5s;
+      }
 
+      .logo:hover {
+       transform: scaleX(150%) scaleY(150%);
+
+      }
       b {
         color: #516543;
       }
@@ -280,7 +290,7 @@
             My passion for BMX has built the foundation of my creative style, with the vibrant, bold, and <br>gritty nature of skateparks bleeding into my designs. The graffiti I see around me every day has <br>inspired me to pick up <b>illustration</b> as a hobby, which is reflected in many of my projects. <br>Time leading my high school yearbook team as well as directing my first documentary <br>has given me excellent <b>project management</b> and <b>collaboration </b>skills.
           </p>
         </div>
-        <img src="MichaelGvozdek - SilhouetteLogo.png" alt="description of image" style="width: 70px; height: 70px;">
+        <img class="logo" src="MichaelGvozdek - SilhouetteLogo.png" alt="Michaels Logo" >
       </div>
     </div>
 
