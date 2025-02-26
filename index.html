@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/ltl0scj.css">
     <style>
       html,  
-      body {
+      body { 
         height: 100%;
         margin: 0;
         overflow: hidden;
@@ -91,7 +91,7 @@
         animation-timing-function: ease-in-out;
       }
 
-      @keyframes title {
+      @keyframes title { 
         0% {
           top: -500px;
           transform: rotate(-5deg);
@@ -248,6 +248,29 @@
       b {
         color: #516543;
       }
+      
+    .arrow-container {
+      position: absolute;
+      top: 90vh;
+      right: 200px;
+      width: 100px;
+      height: auto;
+      animation: bounce 2s ease-out;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: rotate(-5deg) translate(0px, 100px);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    .arrow {
+      width: 100%;
+      height: auto;
+    }
     </style>
   </head>
   <body class="back">
@@ -275,6 +298,9 @@
           Graphic Design - Digital Media
         </h2>
       </div>
+      <div class="arrow-container" id="arrow">
+  <img src="arrow.png" alt="Arrow pointing down" class="arrow">
+</div>
     </div>
     <div class="section sectionTwo">
       <div class="content">
@@ -335,6 +361,7 @@
       });
 
       smoothScroll(); // Start the animation loop
+      
     </script>
   </body>
 </html>
