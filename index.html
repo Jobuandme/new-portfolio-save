@@ -339,9 +339,29 @@
         margin-top: 25px;
         max-width: 500px;
       }
+      
+    .nav-bar {
+      position: fixed;
+      bottom: 20px; /* Slightly above the bottom */
+      left: 50%;
+      transform: translate(-50%, 150%); /* Start even lower */
+      width: 40vw;
+      height: 50px;
+      background: rgba(0, 0, 0, 0.4);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2em;
+      transition: transform 0.3s ease-in-out;
+    }
+
     </style>
   </head>
   <body class="back">
+    <div class="nav-bar" id="navBar">
+      Navigation Bar
+    </div>
     <div class="section sectionOne">
       <div class="silhouetteContainer">
         <div class="silhouette1">
@@ -442,6 +462,19 @@
       });
 
       smoothScroll();
+      
+      const navBar = document.getElementById("navBar");
+      const sectionOne = document.querySelector(".sectionOne");
+
+      function toggleNavBar() {
+        if (window.scrollX > sectionOne.offsetWidth * 0.5) {
+          navBar.style.transform = "translate(-50%, 0)";
+        } else {
+          navBar.style.transform = "translate(-50%, 150%)"; // Move it even lower when hidden
+        }
+      }
+
+      document.addEventListener("scroll", toggleNavBar);
     </script>
 
   </body>
