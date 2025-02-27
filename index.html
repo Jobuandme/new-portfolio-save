@@ -53,7 +53,7 @@
       .back {
         background-color: #caccc9;
         height: 100vh;
-        width: 400vw;
+        width: 600vw;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -197,6 +197,7 @@
       }
 
       .sectionFour {
+        width: 150vw;
         background-color: #516543;
         /* Green */
       }
@@ -284,32 +285,32 @@
         justify-content: space between;
         height: calc(100vh - 200px);
         margin: 100px 100px 100px 100px;
-        gap: 50px;
+        gap: 10vw;
       }
-      
-      .workContainer{
+
+      .workContainer {
         display: flex;
         flex-direction: row;
         align-items: left;
-        height: 80vh;
+        height: 70vh;
         background: rgba(0, 0, 0, 0.4);
-        padding-right: 50px;
+        padding-right: 100px;
       }
-      
-      .workImage img{
+
+      .workImage img {
         object-fit: contain;
         width: fit-content;
         height: auto;
 
       }
-      
+
       .workDescrip {
         display: flex;
         flex-direction: column;
         align-items: left;
 
       }
-      
+
       .workTitle {
         font-family: "azo-sans-web", sans-serif;
         font-weight: 700;
@@ -318,12 +319,13 @@
         width: 100%;
         color: #e8ebe7;
         margin-top: 5vh;
-        line-height: 30px;
+        line-height: 50px;
         text-align: left;
         margin-left: 50px;
 
+
       }
-      
+
       .workPara {
         font-family: "azo-sans-web", sans-serif;
         font-weight: 400;
@@ -336,7 +338,6 @@
         margin-left: 50px;
         margin-top: 25px;
         max-width: 500px;
-
       }
     </style>
   </head>
@@ -389,51 +390,44 @@
 
     <div class="section sectionThree">
       <div class="contentSecond">
-      <div class="workContainer"> 
-        <img class="workImage" src="Jobu Poster New - Low Res.jpg" alt="Jobu Poster"> 
-        <div class="workdescrip">        
-          <div class="workTitle">Jobu Poster</div>
-        <div class="workPara">Lorem Ipsum test test test test Lorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test test</div>
+        <div class="workContainer">
+          <img class="workImage" src="Jobu Poster New - Low Res.jpg" alt="Jobu Poster">
+          <div class="workdescrip">
+            <div class="workTitle">Jobu Poster</div>
+            <div class="workPara">Lorem Ipsum test test test test Lorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test test</div>
+          </div>
         </div>
+        <div class="workContainer">
+          <img src="Gvozdek_Michael_A1_Cover.jpg" alt="Michael Magazine" class="workImage">
+          <div class="workDescrip">
+            <div class="workTitle">Personal Design Magazine </div>
+            <div class="workPara"> Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test</div>
+          </div>
         </div>
-       <div class="workContainer"> 
-        <img src="Gvozdek_Michael_A1_Cover.jpg" alt="Michael Magazine" class="workImage"
-             width="900px" height="600px">
-         <div class="workDescrip">         
-           <div class="workTitle">Personal Design Magazine </div>
-         <div class="workPara"> Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test</div></div>
-
-        
-        </div> 
-        
       </div>
     </div>
 
     <div class="section sectionFour">
+            <div class="contentSecond">
+              <div class="workContainer">
+          <img class="workImage" src="Jobu Poster New - Low Res.jpg" alt="Jobu Poster">
+          <div class="workdescrip">
+            <div class="workTitle">Jobu Poster</div>
+            <div class="workPara">Lorem Ipsum test test test test Lorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test test</div>
+          </div>
+        </div>
+      </div>
     </div>
 
 
     <script>
-      function transformScroll(event) {
-        if (!event.deltaY) {
-          return;
-        }
-        event.currentTarget.scrollLeft += event.deltaY + event.deltaX;
-        event.preventDefault();
-      }
-
-
-      const element = document.scrollingElement || document.documentElement;
-      element.addEventListener('wheel', transformScroll);
-
-      window.addEventListener('scroll', () => {});
-
       const scrollContainer = document.documentElement;
       let scrollAmount = 0;
       let targetScroll = 0;
-      let easeFactor = 0.05; // Adjust for more/less smoothness
+      let easeFactor = 0.05;
 
       function smoothScroll() {
+        targetScroll = Math.max(0, Math.min(targetScroll, scrollContainer.scrollWidth - scrollContainer.clientWidth));
         scrollAmount += (targetScroll - scrollAmount) * easeFactor;
         scrollContainer.scrollLeft = scrollAmount;
         requestAnimationFrame(smoothScroll);
@@ -441,12 +435,14 @@
 
       document.addEventListener("wheel", (event) => {
         event.preventDefault();
-        targetScroll += event.deltaY; // Use `deltaX` if scrolling sideways by default
+        targetScroll += event.deltaY;
+        targetScroll = Math.max(0, Math.min(targetScroll, scrollContainer.scrollWidth - scrollContainer.clientWidth));
       }, {
         passive: false
       });
 
-      smoothScroll(); // Start the animation loop
+      smoothScroll();
     </script>
+
   </body>
 </html>
