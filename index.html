@@ -340,7 +340,21 @@
         max-width: 500px;
       }
       
+    .nav-link {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+      
     .nav-bar {
+      font-family: "azo-sans-web", sans-serif;
+      font-weight: 400;
+      font-style: normal;
       position: fixed;
       bottom: 20px; /* Slightly above the bottom */
       left: 50%;
@@ -360,7 +374,9 @@
   </head>
   <body class="back">
     <div class="nav-bar" id="navBar">
-      Navigation Bar
+      <a href="#" class="nav-link" data-target=".sectionTwo">About Me</a>
+      <a href="#" class="nav-link" data-target=".sectionThree">Projects</a>
+      <a href="#" class="nav-link">Contact</a>
     </div>
     <div class="section sectionOne">
       <div class="silhouetteContainer">
@@ -475,6 +491,19 @@
       }
 
       document.addEventListener("scroll", toggleNavBar);
+      
+    document.querySelectorAll(".nav-link").forEach(link => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        const targetClass = event.target.getAttribute("data-target");
+        if (targetClass) {
+          const targetSection = document.querySelector(targetClass);
+          if (targetSection) {
+            targetScroll = targetSection.offsetLeft; // Set the target scroll position
+          }
+        }
+      });
+    });
     </script>
 
   </body>
