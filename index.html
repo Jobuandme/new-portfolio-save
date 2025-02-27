@@ -126,6 +126,7 @@
       .silhouette2 {
         z-index: 4;
         left: -400px;
+        top: 15px;
       }
 
       .silhouette2:hover {
@@ -135,6 +136,8 @@
       .silhouette3 {
         z-index: 3;
         left: -300px;
+        top: 30px;
+
       }
 
       .silhouette3:hover {
@@ -144,6 +147,8 @@
       .silhouette4 {
         z-index: 2;
         left: -200px;
+        top: 45px;
+
       }
 
       .silhouette4:hover {
@@ -153,6 +158,7 @@
       .silhouette5 {
         z-index: 1;
         left: -100px;
+        top: 60px;
       }
 
       .silhouette5:hover {
@@ -223,7 +229,6 @@
         margin-top: 200px;
         line-height: 30px;
         text-align: left;
-
       }
 
       .content {
@@ -282,7 +287,57 @@
         justify-content: space between;
         height: calc(100vh - 200px);
         margin: 100px 100px 100px 100px;
-        background: red;
+      }
+      
+      .workContainer{
+        display: flex;
+        flex-direction: row;
+        align-items: left;
+        height: 80vh;
+        background: rgba(0, 0, 0, 0.4);
+        padding-right: 50px;
+      }
+      
+      .workImage img{
+        width: 100%;
+        height: 100%;
+        object-fit: none;
+      }
+      
+      .workDescrip {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+
+      }
+      
+      .workTitle {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 3em;
+        width: 100%;
+        color: #e8ebe7;
+        margin-top: 5vh;
+        line-height: 30px;
+        text-align: left;
+        margin-left: 50px;
+
+      }
+      
+      .workPara {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.25em;
+        text-align: left;
+        width: 100%;
+        color: #a9a9a9;
+        line-height: 30px;
+        margin-left: 50px;
+        margin-top: 25px;
+        max-width: 500px;
+
       }
     </style>
   </head>
@@ -334,7 +389,16 @@
     </div>
 
     <div class="section sectionThree">
-      <div class="contentSecond"></div>
+      <div class="contentSecond">
+      <div class="workContainer"> 
+        <img class="workImage" src="Jobu Poster New - Low Res.jpg" alt="Jobu Poster"> 
+        <div class="workdescrip">        
+          <div class="workTitle">Jobu Poster</div>
+        <div class="workPara">Lorem Ipsum test test test test Lorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test test</div>
+        </div>
+
+        </div>
+      </div>
     </div>
 
     <div class="section sectionFour">
