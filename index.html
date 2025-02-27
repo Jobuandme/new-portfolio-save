@@ -12,7 +12,6 @@
         margin: 0;
         overflow: hidden;
         scroll-behavior: auto;
-
       }
 
       .overlay-text {
@@ -38,7 +37,7 @@
         font-family: "azo-sans-web", sans-serif;
         font-weight: 900;
         font-style: normal;
-        font-size: clamp(3em, 5vw, 3em);
+        font-size: clamp(3.5em, 5vw, 3em);
         color: #1e1f1e;
       }
 
@@ -58,8 +57,6 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        /* Ensures items align properly */
-
       }
 
       .silhouetteContainer {
@@ -287,6 +284,7 @@
         justify-content: space between;
         height: calc(100vh - 200px);
         margin: 100px 100px 100px 100px;
+        gap: 50px;
       }
       
       .workContainer{
@@ -299,9 +297,10 @@
       }
       
       .workImage img{
-        width: 100%;
-        height: 100%;
-        object-fit: none;
+        object-fit: contain;
+        width: fit-content;
+        height: auto;
+
       }
       
       .workDescrip {
@@ -396,8 +395,17 @@
           <div class="workTitle">Jobu Poster</div>
         <div class="workPara">Lorem Ipsum test test test test Lorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test testLorem Ipsum test test test test</div>
         </div>
-
         </div>
+       <div class="workContainer"> 
+        <img src="Gvozdek_Michael_A1_Cover.jpg" alt="Michael Magazine" class="workImage"
+             width="900px" height="600px">
+         <div class="workDescrip">         
+           <div class="workTitle">Personal Design Magazine </div>
+         <div class="workPara"> Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test</div></div>
+
+        
+        </div> 
+        
       </div>
     </div>
 
