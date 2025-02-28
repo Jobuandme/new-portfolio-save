@@ -322,8 +322,6 @@
         line-height: 50px;
         text-align: left;
         margin-left: 50px;
-
-
       }
 
       .workPara {
@@ -349,8 +347,10 @@
 
     .nav-link:hover {
       color: #e8ebe7;
-      text-decoration: bold;
-    }
+      font-family: "azo-sans-web", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      }
       
     .nav-bar {
       font-family: "azo-sans-web", sans-serif;
@@ -465,7 +465,7 @@
       let easeFactor = 0.05;
 
       function smoothScroll() {
-        targetScroll = Math.max(0, Math.min(targetScroll, scrollContainer.scrollWidth - scrollContainer.clientWidth));
+        targetScroll = Math.max(0, Math.min(targetScroll,  scrollContainer.scrollWidth - scrollContainer.clientWidth));
         scrollAmount += (targetScroll - scrollAmount) * easeFactor;
         scrollContainer.scrollLeft = scrollAmount;
         requestAnimationFrame(smoothScroll);
@@ -488,7 +488,7 @@
         if (window.scrollX > sectionOne.offsetWidth * 0.5) {
           navBar.style.transform = "translate(-50%, 0)";
         } else {
-          navBar.style.transform = "translate(-50%, 150%)"; // Move it even lower when hidden
+          navBar.style.transform = "translate(-50%, 150%)"; 
         }
       }
 
@@ -501,7 +501,7 @@
         if (targetClass) {
           const targetSection = document.querySelector(targetClass);
           if (targetSection) {
-            targetScroll = targetSection.offsetLeft; // Set the target scroll position
+            targetScroll = targetSection.offsetLeft; 
           }
         }
       });
