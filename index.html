@@ -244,8 +244,8 @@
         flex-direction: column;
         align-items: left;
         justify-content: flex-start;
-        height: 100%;
         padding-left: 100px;
+        gap: 25px;
 
       }
 
@@ -382,7 +382,52 @@
       transition: transform 0.3s ease-in-out;
       gap: 100px;
     }
+      
+    .contacts {
+      flex: 1;
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      justify-content: flex-start;
+    }
+      
+      a.contact:link {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #a9a9a9;
+        text-decoration: none;
+      }
+      a.contact:visited {
+      font-family: "azo-sans-web", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      color: #a9a9a9;
+      text-decoration: none;
+    }    
+     a.contact:hover {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        color: #e8ebe7;
+        text-decoration: none;
 
+      } 
+      
+      h2 {
+        font-family: "azo-sans-web", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #e8ebe7;
+        font-size: 1.2em;
+        margin-bottom: 5px;
+      }
+      
+      .contactList {
+        display: flex;
+        flex-direction: column;
+        align-content: left;
+      }
     </style>
   </head>
   <body class="back">
@@ -497,24 +542,29 @@
   </div>
   
   <div class="sectionContact">
-    <div class="section sectionTwo">
       <div class="content">
         <h1 class="titleElement">
           Contact Me
         </h1>
+        
+        <h2>Email</h2>
+         <a class="contact" href="mailto:michaelgvozdek@icloud.com">michaelgvozdek@icloud.com
+          </a>
 
-        <div class="paraElement">
-          <p><b style="font-size: 1.5em;">I’m Michael Gvozdek</b><br><br>
+        <h2>LinkedIn</h2>
+         <a class="contact" href="https://ca.linkedin.com/in/michael-gvozdek-71938a333">www.linkedin.com/in/michael-gvozdek
+        </a>
 
-            I turn the world around me into vibrant, creative projects. Currently, I'm studying Global Business<br> and Digital Art at the University of Waterloo’s Stratford School of Interaction Design and Business.<br> Digital design has been my focus since highschool and I’ve picked up experience with <b>Photoshop</b>,<br> <b>Illustrator</b>, <b>InDesign</b>, <b>After Effects</b>, and <b>Premiere Pro</b>. In combination with my design skills, I have<br> experience with coding creative projects in Python, Java, Javascript, and HTML/CSS.
-            <br><br>
-            My passion for BMX has built the foundation of my creative style, with the vibrant, bold, and <br>gritty nature of skateparks bleeding into my designs. The graffiti I see around me every day has <br>inspired me to pick up <b>illustration</b> as a hobby, which is reflected in many of my projects. <br>Time leading my high school yearbook team as well as directing my first documentary <br>has given me excellent <b>project management</b> and <b>collaboration </b>skills.
-          </p>
-        </div>
+        <h2>Youtube</h2>
+         <a class="contact" href="https://www.youtube.com/@jobuandme/videos">www.youtube.com/@jobuandme
+        </a>
+        
+        <h2>Instagram</h2>
+         <a class="contact" href="https://www.instagram.com/jobuandme?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">www.instagram.com/jobuandme
+        </a>        
         
       </div>
     </div>
-    </div>  
     
     <script>
       const scrollContainer = document.documentElement;
