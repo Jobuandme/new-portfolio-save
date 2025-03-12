@@ -307,14 +307,24 @@
         padding-right: 100px;
         max-width: 80vw;
       }
-
+      
+    .workContainer a {
+        display: inline-block; /* Prevents `<a>` from stretching */
+      }
+      
       .workImage img {
         object-fit: contain;
-        width: fit-content;
+        width: 100%;
         height: auto;
-
+        display: block;
       }
 
+      .workContainer a img {
+        width: auto; /* Set your preferred size */
+        height: 100%;
+        display: block;
+      }
+      
       .workDescrip {
         display: flex;
         flex-direction: column;
@@ -485,12 +495,16 @@
 
     <div class="section sectionThree">
       <div class="contentSecond">
+        
         <div class="workContainer">
-          <img class="workImage" src="Jobu Poster New - Low Res.jpg" alt="Jobu Poster">
-          <div class="workdescrip">
+          <a href="https://jobuandme.github.io/Jobu-Poster/">
+            <img class="workImage" src="Jobu Poster New - Low Res.jpg" alt="Jobu Poster"></a>
+          
+          
+          <div class="workdescrip">  
             <h1 class="workTitle">Jobu Poster</h1>
             <div class="workPara">Personal Project<br>2025<br><br>
-            A poster I created to express my personal style and practive my illustration.
+            A poster I created to express my personal style and practice my illustration.
             </div>
           </div>
         </div>
